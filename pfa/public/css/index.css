@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta");
+@import url("https://fonts.googleapis.com/css?family=Handlee&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mukta", sans-serif;
+  height: 100vh;
+  background-image: url("images/adult.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 51, 153, 0.7); /* Darker blue overlay */
+}
+
+.login-reg-panel {
+  position: relative;
+  width: 70%;
+  height: 450px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #004085); /* Gradient for depth */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.login-info-box,
+.register-info-box {
+  position: relative;
+  width: 40%;
+  top: 20%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-reg-panel #log-reg-show,
+.login-reg-panel #log-login-show {
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 12px 6px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.login-reg-panel #log-reg-show:hover,
+.login-reg-panel #log-login-show:hover {
+  background: #ffffff;
+  color: #004085;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+.white-panel {
+  position: absolute;
+  top: -50px;
+  width: 42%;
+  height: 500px;
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  transition: all 0.8s ease-in-out;
+  right: calc(60% - 40px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+}
+
+.white-panel.right {
+  right: 50px;
+}
+
+.login-show,
+.register-show {
+  display: none;
+  font-family: "Handlee", cursive;
+  font-size: 20px;
+  color: #004085;
+  text-align: left;
+  padding: 50px 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.register-show.active,
+.login-show.active {
+  display: inherit;
+}
+
+/* INPUT FIELDS */
+.login-show input[type="text"],
+.login-show input[type="password"],
+.register-show input[type="text"],
+.register-show input[type="password"] {
+  width: 90%;
+  color: #004085;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 3px solid #004085;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.login-show input[type="text"]:focus,
+.login-show input[type="password"]:focus,
+.register-show input[type="text"]:focus,
+.register-show input[type="password"]:focus {
+  border-bottom: 3px solid #007bff;
+}
+
+/* FLOATING LABELS */
+.floating {
+  position: relative;
+}
+
+.floating label {
+  position: absolute;
+  font-size: 16px;
+  transform: translate(0, 25px) scale(1.1);
+  transition: all 0.2s ease-in-out;
+  color: #004085;
+}
+
+.floating.active label {
+  transform: translate(0, 0px) scale(1);
+  color: #007bff;
+}
+
+/* BUTTONS */
+.login-show input[type="button"],
+.register-show input[type="button"] {
+  width: 160px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  float: right;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-show input[type="button"]:hover,
+.register-show input[type="button"]:hover {
+  background: #0056b3;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.login-show a {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #002244;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.login-show a:hover {
+  color: #007bff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .login-show input[type="button"],
+  .register-show input[type="button"] {
+    float: none;
+    width: 100%;
+  }
+
+  .login-show a {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
