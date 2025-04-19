@@ -1,0 +1,145 @@
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1e2a3b;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #3a7bd5;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+
+/* Error states */
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+    border-color: #e74c3c;
+}
+
+.form-group .error-message {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group input.error + .error-message,
+.form-group textarea.error + .error-message,
+.form-group select.error + .error-message {
+    display: block;
+}
+
+/* Success message */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.95em;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Dashboard form styles */
+.dashboard .form-group {
+    margin-bottom: 15px;
+}
+
+.dashboard .form-group label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.dashboard .form-group input,
+.dashboard .form-group select,
+.dashboard .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9em;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 15px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    width: 200px;
+    font-size: 0.9em;
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+/* Responsive forms */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+    
+    .contact-info {
+        margin-bottom: 30px;
+    }
+    
+    .search-box input {
+        width: 150px;
+    }
+}
